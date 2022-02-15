@@ -1,0 +1,57 @@
+<header class="site-header">
+    <div class="navbar">
+        <div class="navbar-left">
+            <div class="burger hidden-lg hidden-xl">
+                <div class="burger-bar"></div>
+                <div class="burger-bar"></div>
+            </div>
+            <div class="mobile-menu hidden-lg hidden-xl">
+                <div class="container">
+                    {{#if @site.navigation}}
+                        <nav class="mobile-nav">
+                            {{navigation}}
+                        </nav>
+                    {{/if}}
+                </div>
+            </div>
+            <a class="logo" href="{{@site.url}}">
+                {{#if @site.logo}}
+                    <img class="logo-image" src="{{@site.logo}}" alt="{{@site.title}}">
+                {{else}}
+                    <span class="logo-text">{{@site.title}}</span>
+                {{/if}}
+            </a>
+        </div>
+        {{#if @site.navigation}}
+            <nav class="main-nav hidden-xs hidden-sm hidden-md">
+                {{navigation}}
+            </nav>
+        {{/if}}
+        <div class="navbar-right">
+            <div class="social">
+
+                    <a class="social-item social-item-instagram"
+                        href="https://www.instagram.com/sunny07_____/" target="_blank"
+                        rel="noopener noreferrer" aria-label="Facebook">
+                        INSTA
+                    </a>
+
+                {{#if @site.twitter}}
+                    <a class="social-item social-item-twitter"
+                        href="{{twitter_url @site.twitter}}" target="_blank"
+                        rel="noopener noreferrer" aria-label="Twitter">
+                        TW
+                    </a>
+                {{/if}}
+
+                <a class="social-item social-item-github"
+                    href="https://github.com/snehithkumar-d"
+                    target="_blank" rel="noopener noreferrer" aria-label="RSS">
+                    GIT
+                </a>
+
+
+            </div>
+        </div>
+    </div>
+</header>
